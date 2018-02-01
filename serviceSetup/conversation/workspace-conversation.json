@@ -1,0 +1,1118 @@
+{
+  "name": "ecDemo",
+  "created": "2017-12-22T06:17:19.102Z",
+  "intents": [
+    {
+      "intent": "findRecommend",
+      "created": "2017-12-22T06:19:27.504Z",
+      "updated": "2018-01-02T14:27:44.083Z",
+      "examples": [
+        {
+          "text": "おすすめの服はありますか",
+          "created": "2017-12-22T06:19:51.015Z",
+          "updated": "2017-12-22T06:19:51.015Z"
+        },
+        {
+          "text": "服を探してます",
+          "created": "2017-12-22T06:20:21.572Z",
+          "updated": "2017-12-22T06:20:21.572Z"
+        },
+        {
+          "text": "服を探しています",
+          "created": "2017-12-22T06:20:34.395Z",
+          "updated": "2017-12-22T06:20:34.395Z"
+        },
+        {
+          "text": "服ありませんか",
+          "created": "2017-12-22T06:20:49.009Z",
+          "updated": "2017-12-22T06:20:49.009Z"
+        },
+        {
+          "text": "何かありますか",
+          "created": "2017-12-22T06:20:58.424Z",
+          "updated": "2017-12-22T06:20:58.424Z"
+        },
+        {
+          "text": "INTENT_FIND_RECOMMEND",
+          "created": "2018-01-02T14:27:44.083Z",
+          "updated": "2018-01-02T14:27:44.083Z"
+        }
+      ],
+      "description": "おすすめの服を探す"
+    },
+    {
+      "intent": "Yes",
+      "created": "2017-12-22T09:43:31.156Z",
+      "updated": "2017-12-28T01:33:00.579Z",
+      "examples": [
+        {
+          "text": "はい",
+          "created": "2017-12-22T10:09:34.996Z",
+          "updated": "2017-12-22T10:09:34.996Z"
+        },
+        {
+          "text": "肯定",
+          "created": "2017-12-22T10:09:39.163Z",
+          "updated": "2017-12-22T10:09:39.163Z"
+        },
+        {
+          "text": "そうです",
+          "created": "2017-12-22T10:09:45.984Z",
+          "updated": "2017-12-22T10:09:45.984Z"
+        },
+        {
+          "text": "あってます",
+          "created": "2017-12-22T10:09:48.385Z",
+          "updated": "2017-12-22T10:09:48.385Z"
+        },
+        {
+          "text": "合っています",
+          "created": "2017-12-22T10:09:58.332Z",
+          "updated": "2017-12-22T10:09:58.332Z"
+        },
+        {
+          "text": "Yes",
+          "created": "2017-12-22T10:10:02.606Z",
+          "updated": "2017-12-22T10:10:02.606Z"
+        },
+        {
+          "text": "ハイ",
+          "created": "2017-12-22T10:10:07.473Z",
+          "updated": "2017-12-22T10:10:07.473Z"
+        },
+        {
+          "text": "OK",
+          "created": "2017-12-22T10:10:09.969Z",
+          "updated": "2017-12-22T10:10:09.969Z"
+        },
+        {
+          "text": "おっけー",
+          "created": "2017-12-22T10:10:14.848Z",
+          "updated": "2017-12-22T10:10:14.848Z"
+        },
+        {
+          "text": "いえす",
+          "created": "2017-12-22T10:10:36.794Z",
+          "updated": "2017-12-22T10:10:36.794Z"
+        },
+        {
+          "text": "いいです",
+          "created": "2017-12-28T01:32:57.058Z",
+          "updated": "2017-12-28T01:32:57.058Z"
+        },
+        {
+          "text": "よいです",
+          "created": "2017-12-28T01:33:00.579Z",
+          "updated": "2017-12-28T01:33:00.579Z"
+        }
+      ],
+      "description": "肯定"
+    },
+    {
+      "intent": "No",
+      "created": "2017-12-22T09:47:53.964Z",
+      "updated": "2017-12-28T01:40:34.984Z",
+      "examples": [
+        {
+          "text": "駄目",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "違うと思います",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "違います",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "No",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "NG",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "ちがいます",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "えぬじー",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "いやです",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "いいえ",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "ダメ",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "のー",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        },
+        {
+          "text": "だめ",
+          "created": "2017-12-28T01:40:34.984Z",
+          "updated": "2017-12-28T01:40:34.984Z"
+        }
+      ],
+      "description": "否定"
+    }
+  ],
+  "updated": "2018-01-02T15:33:35.872Z",
+  "entities": [
+    {
+      "entity": "ClothType",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "シャツ",
+          "created": "2017-12-28T07:52:59.989Z",
+          "updated": "2018-01-02T15:29:44.390Z",
+          "metadata": null,
+          "synonyms": [
+            "shirts",
+            "シャツ"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "スカート",
+          "created": "2017-12-28T07:49:47.219Z",
+          "updated": "2018-01-02T15:29:50.003Z",
+          "metadata": null,
+          "synonyms": [
+            "skirt",
+            "スカ",
+            "スカート"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "パンツ",
+          "created": "2017-12-28T07:50:52.065Z",
+          "updated": "2018-01-02T15:29:39.226Z",
+          "metadata": null,
+          "synonyms": [
+            "pants",
+            "ズボン",
+            "オーバーオール",
+            "パン"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ブラウス",
+          "created": "2017-12-28T07:52:11.115Z",
+          "updated": "2018-01-02T15:29:32.793Z",
+          "metadata": null,
+          "synonyms": [
+            "blouse",
+            "ブラウス"
+          ]
+        }
+      ],
+      "created": "2017-12-22T06:23:59.187Z",
+      "updated": "2018-01-02T15:29:50.003Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "ClothColor",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "青",
+          "created": "2017-12-22T10:12:36.050Z",
+          "updated": "2018-01-02T15:28:45.102Z",
+          "metadata": null,
+          "patterns": [
+            "blue",
+            "青[い色ので]",
+            "青"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "黄",
+          "created": "2017-12-22T10:13:06.059Z",
+          "updated": "2018-01-02T15:29:07.997Z",
+          "metadata": null,
+          "patterns": [
+            "yellow",
+            "黄",
+            "黄[い色ので]"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "赤",
+          "created": "2017-12-22T10:12:55.284Z",
+          "updated": "2018-01-02T15:29:01.988Z",
+          "metadata": null,
+          "patterns": [
+            "red",
+            "赤[い色ので]",
+            "赤"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "黒",
+          "created": "2017-12-22T10:13:30.635Z",
+          "updated": "2018-01-02T15:28:38.848Z",
+          "metadata": null,
+          "patterns": [
+            "black",
+            "黒",
+            "黒[い色ので]"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "白",
+          "created": "2017-12-22T10:13:20.869Z",
+          "updated": "2018-01-02T15:29:21.534Z",
+          "metadata": null,
+          "patterns": [
+            "white",
+            "白",
+            "白\b[い色ので]"
+          ]
+        }
+      ],
+      "created": "2017-12-22T10:12:22.490Z",
+      "updated": "2018-01-02T15:29:21.534Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "Gender",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "女性",
+          "created": "2017-12-22T09:59:54.859Z",
+          "updated": "2017-12-28T00:29:05.835Z",
+          "metadata": null,
+          "synonyms": [
+            "女",
+            "おんな",
+            "女子",
+            "女の子",
+            "FEMALE"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "男性",
+          "created": "2017-12-22T10:00:52.025Z",
+          "updated": "2017-12-28T00:29:15.714Z",
+          "metadata": null,
+          "synonyms": [
+            "男",
+            "おとこ",
+            "男子",
+            "男の子",
+            "MALE"
+          ]
+        }
+      ],
+      "created": "2017-12-22T09:50:32.106Z",
+      "updated": "2017-12-28T00:29:15.714Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "created": "2017-12-22T06:23:32.725Z",
+      "updated": "2017-12-22T06:23:32.725Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "Age",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "歳",
+          "created": "2017-12-22T09:59:19.773Z",
+          "updated": "2017-12-28T01:35:58.827Z",
+          "metadata": null,
+          "patterns": [
+            "d*[歳才\b]",
+            "d*さい"
+          ]
+        }
+      ],
+      "created": "2017-12-22T09:51:19.860Z",
+      "updated": "2017-12-28T01:35:58.827Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "created": "2017-12-22T09:58:31.338Z",
+      "updated": "2017-12-22T09:58:31.338Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "created": "2017-12-22T06:23:29.425Z",
+      "updated": "2017-12-22T06:23:29.425Z",
+      "metadata": null,
+      "description": null
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "created": "2017-12-22T06:23:35.243Z",
+      "updated": "2017-12-22T06:23:35.243Z",
+      "metadata": null,
+      "description": null
+    }
+  ],
+  "language": "ja",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2017-05-26"
+    }
+  },
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "お気に入りの服の種類を教えて下さい"
+      },
+      "parent": "slot_21_1514186612075",
+      "context": null,
+      "created": "2017-12-25T07:23:33.614Z",
+      "updated": "2017-12-25T07:24:23.934Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_23_1514186612075",
+      "previous_sibling": "handler_22_1514186612075"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "slot_21_1514186612075",
+      "context": {
+        "clothType": "@ClothType"
+      },
+      "created": "2017-12-25T07:23:33.252Z",
+      "updated": "2017-12-28T07:40:07.399Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "@ClothType",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_22_1514186612075",
+      "previous_sibling": null
+    },
+    {
+      "type": "frame",
+      "title": "年齢・性別入力受付および判定結果提示",
+      "output": {
+        "text": {
+          "values": [
+            "<? $gender ?>で<? $age ?>歳ぐらいですか?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1513924170440",
+      "context": {
+        "useVR": null,
+        "successVR": null,
+        "isWaitForFace": false,
+        "isWaitForClothes": false
+      },
+      "created": "2017-12-22T08:04:23.210Z",
+      "updated": "2018-01-02T15:30:16.598Z",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_4_1513929862486",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_2_1514423461347",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "顔検出不可",
+      "output": {
+        "text": {
+          "values": [
+            "申し訳ありません、お写真からはわからなかったので、年齢と性別を「20歳 女性」のように文字で入力いただけますか。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_1_1513924170440",
+      "context": {
+        "useVR": null,
+        "successVR": null
+      },
+      "created": "2017-12-28T01:11:01.571Z",
+      "updated": "2017-12-29T01:24:30.554Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1513929862486"
+      },
+      "conditions": "$useVR == true && $successVR != true",
+      "description": null,
+      "dialog_node": "node_2_1514423461347",
+      "previous_sibling": null
+    },
+    {
+      "type": "standard",
+      "title": "検索結果なし",
+      "output": {
+        "text": {
+          "values": [
+            "申し訳ありません。 $clothColor 色の $clothType は見つかりませんでした。またのご利用をお待ちしております。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_16_1513937795288",
+      "context": {
+        "isExistItems": false,
+        "isWaitForFace": false,
+        "isWaitForClothes": false,
+        "isWaitingForItemSearch": false
+      },
+      "created": "2017-12-25T07:59:04.839Z",
+      "updated": "2017-12-28T07:41:42.950Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "ようこそ"
+      },
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_28_1514188744617",
+      "previous_sibling": "node_27_1514187705870"
+    },
+    {
+      "type": "standard",
+      "title": "検索結果あり",
+      "output": {
+        "text": {
+          "values": [
+            "商品が見つかりました。こちらの「<? $recommendItemName ?>」はいかがですか?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_16_1513937795288",
+      "context": {
+        "isWaitForFace": false,
+        "isWaitForClothes": false,
+        "isWaitingForItemSearch": false
+      },
+      "created": "2017-12-25T07:41:46.103Z",
+      "updated": "2017-12-29T00:40:30.157Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "$isExistItems==true",
+      "description": null,
+      "dialog_node": "node_27_1514187705870",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "性別を教えて下さい"
+      },
+      "parent": "slot_15_1514185730645",
+      "context": null,
+      "created": "2017-12-25T07:08:51.798Z",
+      "updated": "2017-12-25T07:09:45.837Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_17_1514185730645",
+      "previous_sibling": "handler_16_1514185730645"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "slot_15_1514185730645",
+      "context": {
+        "gender": "@Gender"
+      },
+      "created": "2017-12-25T07:08:51.485Z",
+      "updated": "2017-12-28T07:38:35.805Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "@Gender",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_16_1514185730645",
+      "previous_sibling": null
+    },
+    {
+      "type": "frame",
+      "title": "服の種類・色入力受付および判定結果提示",
+      "output": {
+        "text": {
+          "values": [
+            "<? $clothColor ?>の<? $clothType ?>がお気に召してますか?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1513935779128",
+      "context": {
+        "useVR": null,
+        "successVR": null,
+        "isWaitForFace": null,
+        "isWaitForClothes": null
+      },
+      "created": "2017-12-22T09:44:27.099Z",
+      "updated": "2018-01-02T15:33:35.872Z",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_6_1513935866763",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1514421998386",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "standard",
+      "title": "服検出不可",
+      "output": {
+        "text": {
+          "values": [
+            "申し訳ありません。画像からはわからなかったので、文字で「青いブラウス」のように入力いただけますか。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_5_1513935779128",
+      "context": {
+        "useVR": null,
+        "successVR": null
+      },
+      "created": "2017-12-28T00:46:38.941Z",
+      "updated": "2017-12-29T01:23:32.948Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1513935866763"
+      },
+      "conditions": "$useVR == true && $successVR != true",
+      "description": null,
+      "dialog_node": "node_1_1514421998386",
+      "previous_sibling": null
+    },
+    {
+      "type": "standard",
+      "title": "検索結果評価_No",
+      "output": {
+        "text": {
+          "values": [
+            "お好みではありませんでしたか。申し訳ありません。またのご利用をお待ち申しております。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_27_1514187705870",
+      "context": {
+        "isExistItems": null,
+        "recommendItemName": null
+      },
+      "created": "2017-12-25T08:05:16.736Z",
+      "updated": "2017-12-29T00:20:29.733Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "ようこそ"
+      },
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_30_1514189116519",
+      "previous_sibling": "node_29_1514189040764"
+    },
+    {
+      "type": "standard",
+      "title": "検索結果評価",
+      "output": {
+        "text": {
+          "values": [
+            "ご利用ありがとうございました。またのご利用をお待ち申しております。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_27_1514187705870",
+      "context": {
+        "isExistItems": null,
+        "recommendItemName": null
+      },
+      "created": "2017-12-25T08:04:00.968Z",
+      "updated": "2017-12-29T00:20:12.543Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "ようこそ"
+      },
+      "conditions": "#Yes",
+      "description": null,
+      "dialog_node": "node_29_1514189040764",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "年齢を教えて下さい"
+      },
+      "parent": "slot_18_1514185785728",
+      "context": null,
+      "created": "2017-12-25T07:09:46.579Z",
+      "updated": "2017-12-25T07:10:04.474Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_20_1514185785728",
+      "previous_sibling": "handler_19_1514185785728"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "slot_18_1514185785728",
+      "context": {
+        "age": "@sys-number"
+      },
+      "created": "2017-12-25T07:09:46.263Z",
+      "updated": "2017-12-28T07:38:42.118Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_19_1514185785728",
+      "previous_sibling": null
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": "お気に入りの色を教えて下さい"
+      },
+      "parent": "slot_24_1514186631335",
+      "context": null,
+      "created": "2017-12-25T07:23:52.400Z",
+      "updated": "2017-12-25T07:24:13.067Z",
+      "metadata": null,
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_26_1514186631335",
+      "previous_sibling": "handler_25_1514186631335"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "slot_24_1514186631335",
+      "context": {
+        "clothColor": "@ClothColor"
+      },
+      "created": "2017-12-25T07:23:52.073Z",
+      "updated": "2017-12-28T10:55:01.227Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "@ClothColor",
+      "event_name": "input",
+      "description": null,
+      "dialog_node": "handler_25_1514186631335",
+      "previous_sibling": null
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "node_4_1513929862486",
+      "context": null,
+      "created": "2017-12-25T07:08:51.154Z",
+      "updated": "2017-12-28T07:38:35.132Z",
+      "metadata": {
+        
+      },
+      "variable": "$gender",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_15_1514185730645",
+      "previous_sibling": "node_7_1513936043896"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "node_4_1513929862486",
+      "context": null,
+      "created": "2017-12-25T07:09:45.934Z",
+      "updated": "2017-12-28T07:38:41.768Z",
+      "metadata": {
+        
+      },
+      "variable": "$age",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_18_1514185785728",
+      "previous_sibling": "slot_15_1514185730645"
+    },
+    {
+      "type": "standard",
+      "title": "年齢性別回答依頼",
+      "output": {
+        "text": {
+          "values": [
+            "申し訳ありませんが、年齢と性別を教えてください。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1513929862486",
+      "context": {
+        "age": null,
+        "gender": null,
+        "isWaitForFace": false
+      },
+      "created": "2017-12-22T09:47:24.173Z",
+      "updated": "2017-12-28T07:40:48.926Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1513929862486"
+      },
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_7_1513936043896",
+      "previous_sibling": "node_5_1513935779128"
+    },
+    {
+      "type": "standard",
+      "title": "服画像送信依頼",
+      "output": {
+        "text": {
+          "values": [
+            "これまでに買った服からおすすめの服を考えます。これまでに買った服の写真を５枚以内でお送りください"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_4_1513929862486",
+      "context": {
+        "clothType": null,
+        "clothColor": null,
+        "isWaitForFace": null,
+        "isWaitForClothes": true
+      },
+      "created": "2017-12-22T09:42:59.363Z",
+      "updated": "2017-12-29T00:37:43.822Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "#Yes",
+      "description": null,
+      "dialog_node": "node_5_1513935779128",
+      "previous_sibling": null
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "node_6_1513935866763",
+      "context": null,
+      "created": "2017-12-25T07:23:51.755Z",
+      "updated": "2017-12-28T10:55:00.372Z",
+      "metadata": {
+        
+      },
+      "variable": "$clothColor",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_24_1514186631335",
+      "previous_sibling": "slot_21_1514186612075"
+    },
+    {
+      "type": "standard",
+      "title": "服の種類およびタイプ入力依頼",
+      "output": {
+        "text": {
+          "values": [
+            "違いましたか。どんな色でどんな種類の服がお気に入りですか?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1513935866763",
+      "context": {
+        "clothType": null,
+        "clothColor": null
+      },
+      "created": "2017-12-22T10:17:20.618Z",
+      "updated": "2017-12-28T10:50:04.659Z",
+      "metadata": {
+        
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_6_1513935866763"
+      },
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "node_17_1513937840383",
+      "previous_sibling": "handler_8_1514455116520"
+    },
+    {
+      "type": "event_handler",
+      "title": null,
+      "output": {
+        "text": {
+          "values": [
+            "お気に入りの服の種類を教えてください"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1513935866763",
+      "context": null,
+      "created": "2017-12-28T09:58:36.754Z",
+      "updated": "2017-12-28T10:42:28.950Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": null,
+      "event_name": "focus",
+      "description": null,
+      "dialog_node": "handler_8_1514455116520",
+      "previous_sibling": "node_16_1513937795288"
+    },
+    {
+      "type": "slot",
+      "title": null,
+      "output": {
+        
+      },
+      "parent": "node_6_1513935866763",
+      "context": null,
+      "created": "2017-12-25T07:23:32.936Z",
+      "updated": "2017-12-28T07:40:06.910Z",
+      "metadata": {
+        
+      },
+      "variable": "$clothType",
+      "next_step": null,
+      "conditions": null,
+      "description": null,
+      "dialog_node": "slot_21_1514186612075",
+      "previous_sibling": "node_17_1513937840383"
+    },
+    {
+      "type": "standard",
+      "title": "服探し開始",
+      "output": {
+        "text": {
+          "values": [
+            "<? $clothColor-local ? $clothColor-local: $clothColor ?>の<? $clothType-local ? $clothType-local: $clothType ?>を探しますね。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "node_6_1513935866763",
+      "context": {
+        "isWaitForFace": false,
+        "isWaitForClothes": false,
+        "isWaitingForItemSearch": true
+      },
+      "created": "2017-12-22T10:16:35.706Z",
+      "updated": "2018-01-02T15:20:23.757Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "#Yes",
+      "description": null,
+      "dialog_node": "node_16_1513937795288",
+      "previous_sibling": null
+    },
+    {
+      "type": "standard",
+      "title": "その他",
+      "output": {
+        "text": {
+          "values": [
+            "解釈できませんでした。申し訳ありませんが違う表現をお試しいただけますか。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": null,
+      "context": null,
+      "created": "2017-12-22T06:29:24.406Z",
+      "updated": "2017-12-25T08:15:24.395Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "anything_else",
+      "description": null,
+      "dialog_node": "その他",
+      "previous_sibling": "node_1_1513924170440"
+    },
+    {
+      "type": "standard",
+      "title": "服探し開始および顔写真送信依頼",
+      "output": {
+        "text": {
+          "values": [
+            "性別と年齢と今まで買った服の写真でオススメの服を探します。まずはあなたの顔写真を送るか、性別と年齢を文字で送信してください。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": null,
+      "context": {
+        "isWaitForFace": true
+      },
+      "created": "2017-12-22T06:29:30.678Z",
+      "updated": "2017-12-28T01:16:16.685Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "#findRecommend",
+      "description": null,
+      "dialog_node": "node_1_1513924170440",
+      "previous_sibling": "ようこそ"
+    },
+    {
+      "type": "standard",
+      "title": "ようこそ",
+      "output": {
+        "text": {
+          "values": [
+            "いらっしゃいませ。ご用件を「服を探す」のように入力してください。"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": null,
+      "context": {
+        
+      },
+      "created": "2017-12-22T06:29:24.406Z",
+      "updated": "2017-12-28T02:00:56.678Z",
+      "metadata": {
+        
+      },
+      "next_step": null,
+      "conditions": "welcome",
+      "description": null,
+      "dialog_node": "ようこそ",
+      "previous_sibling": null
+    }
+  ],
+  "workspace_id": "xxxx",
+  "counterexamples": [],
+  "learning_opt_out": false
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ecsample",
+  "version": "0.0.0",
+  "dependencies": {
+    "axios": "0.17.x",
+    "bulma": "0.6.x",
+    "es6-shim": "*",
+    "vue": "2.5.x"
+  },
+  "devDependencieds": {
+  }
+}

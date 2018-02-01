@@ -1,0 +1,14 @@
+{
+  "CONVERSATION_WS_ID": "f84db207-2561-40e9-be35-b241db593560",
+  "VISUAL_RECOGNITION_CLASSIFIERS": {
+    "CLOTH_COLOR_TYPE": "ClothColorType_820602790"
+  },
+  "DB_NAME": "ecsitedb",
+  "DB_INDEX": {
+    "SEARCH_ITEM": {
+      "designDocName": "item",
+      "indexName": "itemSearch"
+    }
+  },
+  "LOG_LEVEL": "info"
+}

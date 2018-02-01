@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-language" content="ja">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Visual Recognition Demo</title>
+
+  <!-- css -->
+  <link type="text/css" rel="stylesheet" href="bower_components/bulma/css/bulma.css"/>
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="main" class="main-container">
+    <nav class="nav-container">
+      <div class="tabs is-right nav-items-container">
+        <div class="nav-logo-container">
+          <img class="nav-logo-image" src="images/logo.png"/>
+        </div>
+        <ul>
+          <li v-bind:class="{'is-active': currentTab == 0}"><a @click="currentTab = 0">Chat</a></li>
+          <li v-bind:class="{'is-active': currentTab == 1}"><a @click="currentTab = 1">Items</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="tab-content">
+      <div v-show="currentTab == 0" class="tab-content-placeholder">
+        <!-- チャットタブの中身 -->
+        <chatdiv v-on:opendialog="openDialog($event)"><!-- id="chatTab"のテンプレートで定義したものが描画されます --></chatdiv>
+      </div>
+
+      <div v-show="currentTab == 1" class="tab-content-placeholder">
+        <!-- 商品一覧タブの中身 -->
+        <itemdiv v-on:opendialog="openDialog($event)"><!-- id="itemTab"のテンプレートで定義したものが描画されます --></itemdiv>
+      </div>
+    </div>
+
+    <!-- dialog contents -->
+    <div class="modal" v-bind:class="{'is-active': isShowDialog}">
+      <div class="modal-background" @click="closeDialog($event)"></div>
+      <div class="modal-content dialog-content">
+        <div v-if="isShowDialog">
+          <itempreview><!-- id="itemPreview"のテンプレートで定義したものが描画されます --></itempreview>
+        </div>
+      </div>
+      <button class="modal-close is-large dialog-button-close" aria-label="close" @click="closeDialog($event)" ></button>
+    </div>
+  </div>
+
+  <script type="text/x-template" id="chatTab">
+    <div class="tab-content-item">
+      <div id="timeline" class="chat-timeline">
+        <div v-for="(talk, index) in talks" v-bind:class="{'callout-right': talk.isClient}" class="columns is-mobile chat-timeline-callout" v-bind:data-msg-id="talk.messageId" v-if="!talk.isHide">
+          <div v-bind:class="{'callout-right': talk.isClient}" class="chat-timeline-callout-text">
+            <div>{{ talk.text }}</div>
+            <div class="container-thumbnails">
+              <img class="thumbnail" v-for="(image, i) in talk.images" v-bind:src="image" v-if="talk.isClient" @click="openImagePreview($event, image)" />
+              <img class="thumbnail" v-for="(item, i) in talk.items" v-bind:src="item.image" v-if="!talk.isClient" @click="openItemPreview($event, item)"/>
+            </div>
+
+            <div v-if="talk.error" class="message is-danger is-small">
+              <div class="message-body">
+                <div>{{talk.error.message || '不明なエラーです'}}</div>
+                <div>{{talk.error.stack || ''}}</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 回答待ちふきだし用 -->
+        <div class="columns is-mobile chat-timeline-callout" v-show="isRequesting">
+          <div class="column is-10 chat-timeline-callout-text">
+            <div>......</div>
+          </div>
+        </div>
+      </div>
+      <div id="inputArea" class="chat-form">
+        <form @submit.prevent="sendMessage($event)" class="chat-form-container">
+          <div class="field has-addons">
+            <div class="control is-expanded">
+              <input type="text" v-model="message" name="message" class="input" placeholder="メッセージを記入"/>
+
+              <div class="chat-form-file">
+                <label class="file-label">
+                  <input class="file-input" type="file" name="tempimage" accept="image/*" capture="environment" @change="readImage" v-if="keepFileInput" />
+                  <span class="file-cta">
+                    <span class="file-label">
+                      画像添付…
+                    </span>
+                  </span>
+                </label>
+                <div class="container-thumbnails">
+                  <img class="thumbnail" v-for="(image, index) in stagedImages" v-bind:src="image" />
+                  <button class="delete" @click.prevent="stagedImages = []" v-if="stagedImages.length"></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="control">
+              <input type="submit" value="送信" class="button is-link chat-form-button-submit" v-bind:disabled="isRequesting"/>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-template" id="itemPreview">
+    <div class="image itempreview-imageonly-container" v-if="state.currentItem.isOnlyImage">
+      <img v-bind:src="state.currentItem.image">
+    </div>
+    <div class="card" v-else>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img v-bind:src="state.currentItem.image" class="itempreview-image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{state.currentItem.name}}</p>
+            <p class="subtitle is-6">&yen; {{state.currentItem.price}}</p>
+          </div>
+        </div>
+    
+        <div class="content">
+          {{state.currentItem.description}}
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script type="text/x-template" id="itemTab">
+    <div class="tab-content-item" >
+      <div class="item-search">
+        <form @submit.prevent="updateItemListView($event)"><div class="field has-addons">
+          <div class="control">
+            <input class="input" type="text" placeholder="例: 青 スカート" v-model="searchText" />
+          </div>
+          <div class="control">
+            <input type="submit" value="検索" class="button is-link" v-bind:disabled="isRequesting"/>
+          </div>
+        </div></form>
+      </div>
+      <div class="item-list">
+        <div class="item-list-notice" v-if="currentError && !isRequesting">
+          <div>エラーが発生しました。</div>
+          <div class="message is-danger is-small">
+            <div class="message-body">
+              {{currentError.message || '不明なエラーです'}}
+            </div>
+          </div>
+        </div>
+        <div class="item-list-notice" v-if="!items.length && !isRequesting && !currentError">
+          <p>商品を探すキーワードを入力し、「検索」を押してください</p>
+          <p>空欄の場合は全商品が表示されます</p>
+        </div>
+        <div class="item-list-notice" v-if="isRequesting">
+          <div>検索中...</div>
+        </div>
+        <ul>
+          <li v-for="(item, index) in items">
+            <div class="box media item-list-item" @click="openItemPreview($event, item)">
+              <div class="media-left">
+                <figure class="image is-48x48 item-list-item-image">
+                  <img v-bind:src="item.image">
+                </figure>
+              </div>
+              <div class="media-content item-list-item-text">
+                <p><strong>{{item.name}}</strong></p>
+                <p>&yen; {{item.price}}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </script>
+
+  <!-- jsファイル読み込み 読み込み順序は,利用する関数の定義を先に読み込むよう調整して下さい -->
+
+  <!-- es6-shim ES6非対応ブラウザでもPromise等が使えるようにするライブラリ -->
+  <script src="bower_components/es6-shim/es6-shim.min.js"></script>
+  <!-- Vue.js javascriptのデータと画面をバインドするライブラリ -->
+  <script src="bower_components/vue/dist/vue.min.js"></script>
+  <!-- axios Ajax通信用ライブラリ -->
+  <script src="bower_components/axios/dist/axios.min.js"></script>
+
+  <script src="js/store.js"></script>
+  <script src="js/api-accessor.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/item.js"></script>
+  <script src="js/itemPreview.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

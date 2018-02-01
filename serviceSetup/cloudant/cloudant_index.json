@@ -1,0 +1,17 @@
+{
+  "_id": "_design/item",
+  "views": {},
+  "language": "javascript",
+  "indexes": {
+    "itemSearch": {
+      "analyzer": {
+        "name": "perfield",
+        "default": "japanese",
+        "fields": {
+          "default": "standard"
+        }
+      },
+      "index": "function (doc) {\n  if (doc.docType == 'ITEM') {\n    var searchTargetKey = [doc.name, doc.description];\n    index(\"default\", searchTargetKey.join(' '));\n    for(var key in doc) {\n      if(key !== '_id' && key !== '_rev') {\n        index(key, doc[key], {store: 'yes'});\n      }\n    }\n  }\n}\n"
+    }
+  }
+}

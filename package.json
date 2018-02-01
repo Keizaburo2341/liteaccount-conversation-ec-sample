@@ -1,0 +1,29 @@
+{
+  "name": "ecsample",
+  "version": "0.0.1",
+  "description": "EC site with watson conversation demo",
+  "main": "app.js",
+  "private": true,
+  "engines": {
+    "node": ">=6.11.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "postinstall": "bower install"
+  },
+  "dependencies": {
+    "archiver": "2.1.*",
+    "body-parser": "*",
+    "bower": "*",
+    "cfenv": "1.0.x",
+    "cloudant": "1.10.x",
+    "cookie-parser": "*",
+    "cookie-session": "*",
+    "express": "4.*",
+    "serve-favicon": "*",
+    "watson-developer-cloud": "3.0.x",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+  }
+}

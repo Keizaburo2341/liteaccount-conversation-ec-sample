@@ -1,0 +1,67 @@
+{
+    "watson_vision_combined": [
+        {
+            "credentials": {
+                "url": "https://gateway-a.watsonplatform.net/visual-recognition/api",
+                "note": "NOTIFICATION_FROM_SERVICE",
+                "api_key": "YOUR_API_KEY"
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "watson_vision_combined",
+            "provider": null,
+            "plan": "free",
+            "name": "YOUR_VR_SERVICE_NAME",
+            "tags": [
+                "watson",
+                "ibm_created",
+                "ibm_dedicated_public",
+                "lite"
+            ]
+        }
+    ],
+    "conversation": [
+        {
+            "credentials": {
+                "url": "https://gateway.watsonplatform.net/conversation/api",
+                "username": "USERNAME_FOR_YOUR_CONVERSATION_SERVICE",
+                "password": "PASSWORD_FOR_YOUR_CONVERSATION_SERVICE"
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "conversation",
+            "provider": null,
+            "plan": "free",
+            "name": "YOUR_CONVERSATION_SERVICE_NAME",
+            "tags": [
+                "watson",
+                "ibm_created",
+                "ibm_dedicated_public",
+                "lite"
+            ]
+        }
+    ],
+    "cloudantNoSQLDB": [
+        {
+            "credentials": {
+                "username": "USERNAME_FOR_YOUR_CLOUDANT_SERVICE",
+                "password": "PASSWORD_FOR_YOUR_CLOUDANT_SERVICE",
+                "host": "HOST_FOR_YOUR_CLOUDANT_SERVICE",
+                "port": 443,
+                "url": "https://USERNAME_FOR_YOUR_CLOUDANT_SERVICE:PASSWORD_FOR_YOUR_CLOUDANT_SERVICE@HOST_FOR_YOUR_CLOUDANT_SERVICE"
+            },
+            "syslog_drain_url": null,
+            "volume_mounts": [],
+            "label": "cloudantNoSQLDB",
+            "provider": null,
+            "plan": "Lite",
+            "name": "YOUR_CLOUDANT_SERVICE_NAME",
+            "tags": [
+                "data_management",
+                "ibm_created",
+                "lite",
+                "ibm_dedicated_public"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+# (C) Copyright IBM Corp. 2018
+# All Rights Reserved
+#
+# this used "cf push"
+# fill your space environment infomation
+# before you "cf push", change target space as following command: 
+# cf target -o "your organization" -s "your space"
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: YOUR_APP_NAME
+  host: YOUR_APP_NAME
+  disk_quota: 1024M
+#  env:
+#    VALID_USERID: userid
+#    VALID_PASSWORD: password

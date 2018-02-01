@@ -1,0 +1,211 @@
+/* オーバーフローした場合はスクロールさせずに隠す */
+html {
+  overflow: hidden;
+}
+
+/* 画面外枠 */
+.main-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* 画面上部のタブ等の部分 */
+.nav-container {
+  height: initial;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
+}
+.nav-items-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* 画面右上のロゴマーク部分 */
+.nav-logo-container {
+  width: auto;
+  height: 41px;
+}
+.nav-logo-image {
+  height: 100%;
+}
+
+/* 画面のタブ部分 */
+.nav-container ul {
+  border-bottom: none;
+}
+.nav-container a {
+  border-bottom: none;
+}
+.nav-container li.is-active a {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+/* 画面のタブの中身の外枠部分 */
+.tab-background {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.tab-content {
+  height: calc(100% - 41px);
+  position: absolute;
+  width: 100%;
+  top: 41px;
+}
+.tab-content-placeholder {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  padding: 5px;
+}
+.tab-content-item {
+  height: 100%;
+  width: 100%;
+}
+
+/* chatタブのふきだしが並ぶ部分 */
+.chat-timeline {
+  height: calc(100% - 75px);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* chatタブのふきだし */
+.chat-timeline-callout {
+  margin: 5px 10px;
+}
+.chat-timeline-callout.callout-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+.chat-timeline-callout-text{
+  color: #ffffff;
+  position: relative;
+  padding: 20px;
+  background-color: #209cee;
+  display: inline-block; 
+  margin: 0 10px;
+  max-width: 70%;
+}
+.chat-timeline-callout-text::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 10px;
+  border-right: 10px solid #209cee;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+.chat-timeline-callout-text.callout-right{
+  background-color: #ffdb4a;
+  color: #5e5e5e;
+  float: right;
+  clear: both;
+}
+.chat-timeline-callout-text.callout-right::before{
+  right: -10px;
+  left: 100%;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #ffdb4a;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* chatタブの送信フォーム */
+.chat-form {
+  height: 75px;
+  width: 100%;
+}
+.chat-form-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* chatタブの送信フォームやふきだしのサムネイル画像 */
+.container-thumbnails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.thumbnail {
+  width: auto;
+  height: 30px;
+  margin: auto 5px;
+  object-fit: contain;
+}
+
+/* chatタブの送信フォームの送信ボタン */
+.chat-form-button-submit {
+  height: 72px;
+}
+
+/* itemタブの検索フォーム */
+.item-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack:center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+/* itemタブの商品リスト部分 */
+.item-list {
+  position: relative;
+  height: calc(100% - 36px);
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/* itemタブのメッセージ部分(商品検索前のフォーム下の文言) */
+.item-list-notice {
+  text-align: center;
+}
+
+/* itemタブの商品リストの商品情報行 */
+.item-list-item {
+  margin: 5px;
+}
+.item-list-item-image {
+  height: 100%;
+  width: auto;
+}
+
+/* 商品プレビューダイアログの枠 */
+.dialog-content {
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 0 50px;
+}
+
+/* 商品プレビューダイアログの閉じるアイコン */
+.dialog-button-close {
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
+/* ダイアログが送信画像プレビューの場合のマージンを設定 */
+.itempreview-imageonly-container {
+  margin: auto;
+}
+.itempreview-image {
+  object-fit: contain;
+}
