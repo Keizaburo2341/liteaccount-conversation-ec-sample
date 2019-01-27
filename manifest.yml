@@ -10,8 +10,8 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: YOUR_APP_NAME
-  host: YOUR_APP_NAME
+  name: G-team
+  host: G-team
   disk_quota: 1024M
 #  env:
 #    VALID_USERID: userid
